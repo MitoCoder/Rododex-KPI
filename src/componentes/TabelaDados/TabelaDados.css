@@ -1,0 +1,126 @@
+/* Estilos para a tabela de dados */
+.tabela-dados-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo para linhas com OTIF aprovado */
+.ant-table-row-otif-ok {
+  background-color: #f6ffed;
+  transition: background-color 0.3s;
+}
+
+.ant-table-row-otif-ok:hover {
+  background-color: #d9f7be !important;
+}
+
+/* Estilo para linhas com OTIF reprovado */
+.ant-table-row-otif-nok {
+  background-color: #fff2f0;
+  transition: background-color 0.3s;
+}
+
+.ant-table-row-otif-nok:hover {
+  background-color: #ffccc7 !important;
+}
+
+/* Estilo para cabeçalho da tabela */
+.ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Estilo para células da tabela */
+.ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+/* Estilo para tooltips */
+.ant-tooltip-inner {
+  font-size: 12px;
+}
+
+/* Estilo para os filtros */
+.ant-table-filter-dropdown {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para paginação */
+.ant-pagination {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.ant-pagination-item-active {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-pagination-item-active a {
+  color: white;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .ant-table-tbody > tr > td {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .ant-table-thead > tr > th {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Estilo para indicadores de status */
+.status-tag {
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-tag-success {
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  color: #52c41a;
+}
+
+.status-tag-error {
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #ff4d4f;
+}
+
+.status-tag-warning {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  color: #faad14;
+}
+
+/* Estilo para zebra stripes */
+.ant-table-tbody > tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Animação de loading */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tabela-loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}

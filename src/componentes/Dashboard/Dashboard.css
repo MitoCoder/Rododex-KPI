@@ -1,0 +1,93 @@
+/* src/componentes/Dashboard/Dashboard.css */
+.dashboard-container {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+.dashboard-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.stat-card {
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .ant-statistic-title {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-bottom: 8px;
+}
+
+.stat-card .ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Estilo para os gráficos */
+.recharts-wrapper {
+  margin: 0 auto;
+}
+
+/* Estilo para as abas */
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+  background: #fafafa;
+  border-color: #e8e8e8;
+  border-radius: 8px 8px 0 0;
+  padding: 12px 24px;
+  font-weight: 500;
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active {
+  background: #fff;
+  border-bottom-color: #fff;
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1890ff;
+  font-weight: 600;
+}
+
+/* Estilo para as tabelas */
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #e6f7ff;
+}
+
+/* Estilo para os alerts */
+.ant-alert {
+  border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+  
+  .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+    padding: 8px 16px;
+  }
+  
+  .stat-card .ant-statistic-content {
+    font-size: 20px;
+  }
+}
