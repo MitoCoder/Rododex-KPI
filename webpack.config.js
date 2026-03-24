@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
     clean: true,
+    publicPath: '/',  // IMPORTANTE para a Vercel
   },
   mode: 'development',
   devServer: {
@@ -31,7 +32,7 @@ module.exports = {
           options: {
             presets: [
               '@babel/preset-env',
-              ['@babel/preset-react', { runtime: 'classic' }]
+              ['@babel/preset-react', { runtime: 'automatic' }]  // ✅ MUDAR para 'automatic'
             ]
           }
         }
@@ -39,7 +40,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        // Inclui tanto arquivos CSS do src quanto do node_modules (Ant Design)
         include: [
           path.resolve(__dirname, 'src'),
           /node_modules/
